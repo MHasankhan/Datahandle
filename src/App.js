@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./index.css";
+import React, { PureComponent } from "react";
+import { Table,Select } from "antd";
+import {dataSource1,columns, pricing} from './datamodel';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends PureComponent {
+
+
+componentDidMount(){
+    // let x=Object.keys(pricing);
+    let y=Object.values( pricing["free_linux"]["SAHABA-General-I`1:4"]);
+
+    let x=["SAHABA-General-I`1:4"];
+    console.log(y);
+    
 }
+
+
+
+  render() {
+    return (
+      <div>
+          <Select   placeholder="Select"> 
+              
+              </Select>
+
+        <Table dataSource={dataSource1} columns={columns} />;
+      </div>
+    );
+  }
+}
+
+
 
 export default App;

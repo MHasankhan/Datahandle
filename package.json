@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.25.0",
+    "babel-plugin-import": "^1.12.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "rescripts start",
+
+    "build": "rescripts build",
+    "test": "rescripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +30,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@rescripts/cli": "0.0.13",
+    "@rescripts/rescript-env": "0.0.11"
   }
 }
